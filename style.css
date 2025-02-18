@@ -1,0 +1,816 @@
+/* Resetting margins, paddings, and box-sizing for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #ffffff; /* Dark background */
+    color: #e0e0e0; /* Light text */
+}
+
+/* Header Styling */
+header {
+    background-color: #b9afaf; 
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Logo */
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    padding-left: 18px;
+}
+
+/* Navbar */
+header nav ul {
+    list-style: none;
+    display: flex;
+    padding-top: 10px;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+header nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    text-decoration: none;
+}
+
+/* Responsive Navbar */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+    header {
+        padding: 10px;
+    }
+
+    header nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #1f1f1f;
+        width: 100%;
+        text-align: center;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    header nav ul li {
+        margin: 0;
+        padding: 15px 0;
+    }
+
+    header nav ul li a {
+        display: block;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav.active ul {
+        display: flex;
+    }
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('https://images.unsplash.com/photo-1518655048521-f130df041f66?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cG9ydGZvbGlvJTIwYmFja2dyb3VuZHxlbnwwfHwwfHx8MA%3D%3D'); 
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: black;
+}
+
+/* Flexbox for Vertical Layout */
+.hero-container {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+    text-align: center;
+    max-width: 800px;
+    padding-top: 65px;
+}
+
+/* Profile Picture */
+.hero .profile-pic {
+    width: 25vw;  /* 25% of viewport width */
+    height: 25vw;
+    max-width: 250px;  /* Limit max size */
+    max-height: 250px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    object-fit: cover;
+}
+
+
+/* Text Content */
+.hero-content {
+    max-width: 800px;
+}
+
+/* Heading */
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+/* Paragraph */
+.hero p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+
+/* Section styling */
+.section {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Section titles */
+.section h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+/* Unordered lists */
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+ul li {
+    margin-bottom: 20px;
+    color: #e0e0e0; /* Light text for items */
+}
+/* Button Styling */
+.btn-download {
+    display: inline-block;
+    background-color: #007bff; /* Primary button color */
+    color: white;
+    padding: 12px 20px;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out;
+    text-align: center;
+    width: auto;
+    max-width: 250px;
+}
+
+/* Hover Effect */
+.btn-download:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .btn-download {
+        font-size: 16px; /* Adjust font size for smaller screens */
+        padding: 10px 15px;
+        width: 90%; /* Make button wider on small screens */
+        display: block; /* Make it a block element for better spacing */
+        margin: 10px auto; /* Center the button */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .btn-download {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+}
+/* Footer */
+footer {
+    background-color: #b9afaf;
+    color: #e0e0e0;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    height: 36px;
+}
+
+/* Profile picture container */
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    object-fit: cover;
+}
+
+/* Media queries for mobile responsiveness */
+@media screen and (max-width: 768px) {
+    .project-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-pic {
+        margin-bottom: 20px;
+    }
+}
+
+    .about-container {
+        display: flex;
+        flex-direction: row; /* Align items side by side */
+        align-items: flex-start;
+        justify-content: space-between; /* Spread content */
+        background-color: #1f1f1f; /* Dark background */
+        color: white; /* Light text */
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+        max-width: 900px;
+        margin: 40px auto; /* Center the box */
+    }
+    
+    /* About text on the left */
+    .about-text {
+        flex: 1;
+        font-size: 18px;
+        line-height: 1.6;
+        text-align: justify;
+        padding-right: 20px; /* Spacing between text and info box */
+    }
+    
+    /* Basic Information box on the right */
+    .info-box {
+        background-color: #2c2c2c; 
+        padding: 20px;
+        border-radius: 8px;
+        width: 40%; /* Adjust width */
+    }
+    
+    /* Styling for headings */
+    .about-container h2,
+    .info-box h3 {
+        color: white;
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+    
+    /* Info list styles */
+    .info-box ul {
+        list-style: none;
+        padding-left: 0;
+        color: white;
+    }
+    
+    .info-box ul li {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    
+    .info-box ul li strong {
+        color: #1a73e8; /* Accent color for labels */
+    }
+    
+    /* Styling for email link */
+    .info-box ul li a {
+        color: #1a73e8;
+        text-decoration: none;
+    }
+    
+    .info-box ul li a:hover {
+        text-decoration: underline;
+    }
+    
+    /* Responsive design */
+    @media (max-width: 768px) {
+        .about-container {
+            flex-direction: column;
+            text-align: center;
+        }
+    
+        .about-text {
+            padding-right: 0;
+            margin-bottom: 20px;
+        }
+    
+        .info-box {
+            width: 100%;
+        }
+    }
+    
+/* Skills Section */
+#skills {
+    background-color: #282828; /* Dark background */
+    color: #e0e0e0; /* Light text */
+    padding: 50px 20px;
+}
+
+#skills h2 {
+    text-align: center;
+    color: #fff;
+    font-size: 36px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Skills Container */
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto; /* Center align */
+}
+
+/* Skill Item */
+.skill-item {
+    background-color: #333; /* Slightly lighter background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.skill-item h3 {
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Progress Bar Container */
+.progress-bar {
+    width: 100%;
+    height: 20px;
+    background: #eee;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Progress Bar */
+.progress {
+    height: 100%;
+    background: #007bff;
+    width: 0; /* Initially 0, will animate with JavaScript */
+    transition: width 1.5s ease-in-out;
+    text-align: right;
+    padding-right: 10px;
+    color: white;
+    font-weight: bold;
+    line-height: 20px;
+}
+@media (max-width: 768px) {
+    #skills {
+        padding: 30px 15px; /* Reduce padding on smaller screens */
+    }
+
+    #skills h2 {
+        font-size: 28px; /* Reduce heading size */
+    }
+
+    .skills-container {
+        gap: 20px; /* Reduce gap between skill items */
+    }
+
+    .skill-item {
+        padding: 15px; /* Reduce padding */
+    }
+
+    .skill-item h3 {
+        font-size: 20px; /* Adjust heading size */
+    }
+
+    .progress-bar {
+        height: 16px; /* Reduce progress bar height */
+    }
+
+    .progress {
+        line-height: 16px; /* Adjust text alignment */
+    }
+}
+
+/* Experience Section */
+.experience-section {
+    background-color: #f9f9f9; /* Light background for the experience section */
+    color: #333; /* Dark text for better readability */
+    padding: 50px 0;
+}
+
+.experience-section h2 {
+    text-align: center;
+    color: #333; /* Dark color for the section title */
+    font-size: 36px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Experience Container */
+.experience-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto; /* Center align */
+}
+
+/* Experience Card */
+.experience-card {
+    background-color: #fff; /* Light background for the cards */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow */
+}
+
+.experience-card h3 {
+    color: #333; /* Dark text for job titles */
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.experience-card p {
+    font-size: 16px;
+    color: #333; /* Dark text for paragraph */
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.experience-card p strong {
+    color: #1a73e8; /* Accent color for company names */
+}
+
+/* Media Query for mobile screens */
+@media screen and (max-width: 768px) {
+    .experience-section h2 {
+        font-size: 28px;
+    }
+
+    .experience-card h3 {
+        font-size: 20px;
+    }
+
+    .experience-card p {
+        font-size: 14px;
+    }
+}
+#projects h2 {
+    text-align: center;
+    font-size: 2rem; /* Adjust size as needed */
+    margin-bottom: 20px; /* Add space below */
+    color: black;
+}
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    color: black;
+}
+
+.project-card {
+    width: 250px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.project-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+/* Modal Styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    width: 50%;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.close {
+    color: black;
+    font-size: 24px;
+    font-weight: bold;
+    float: right;
+    cursor: pointer;
+}
+/* Contact Section */
+#contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #f9f9f9;
+    padding: 50px 0;
+    
+}
+
+.contact-container {
+    background: white;
+    padding: 40px;
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+h2 {
+    margin-bottom: 10px;
+    font-size: 26px;
+    font-weight: bold;
+    color: black;
+}
+
+p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    background: #f5f5f5;
+    border-radius: 25px;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+}
+
+.input-group i {
+    margin-right: 10px;
+    color: #888;
+}
+
+.input-group input {
+    width: 100%;
+    border: none;
+    background: none;
+    outline: none;
+    font-size: 16px;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    border-radius: 10px;
+    border: none;
+    background: #f5f5f5;
+    padding: 10px;
+    font-size: 16px;
+    outline: none;
+    margin-bottom: 15px;
+}
+
+.send-btn {
+    width: 100%;
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 18px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.send-btn:hover {
+    background: #0056b3;
+}
+
+.address {
+    margin-top: 20px;
+    font-size: 16px;
+    color: black;
+}
+
+
+/* General Mobile Optimization */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    .menu-toggle {
+        display: block;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    nav {
+        display: none;
+        width: 100%;
+        background: #b9afaf;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 0;
+        padding: 15px 0;
+        width: 100%;
+    }
+
+    nav ul li a {
+        display: block;
+        font-size: 18px;
+    }
+
+    .hero {
+        height: 400px;
+        padding: 20px;
+    }
+
+    .hero h1 {
+        font-size: 24px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .btn-download {
+        width: 90%;
+        font-size: 14px;
+        padding: 10px;
+        margin-top: 10px;
+    }
+
+    .about-container {
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .info-box {
+        width: 100%;
+    }
+
+    .skills-container, .experience-container {
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .skill-item {
+        padding: 15px;
+    }
+
+    .progress-bar {
+        height: 15px;
+    }
+
+    .experience-card {
+        padding: 15px;
+    }
+
+    footer {
+        height: auto;
+        padding: 15px;
+        text-align: center;
+    }
+}
+@media screen and (max-width: 768px) {
+    .contact-container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .contact-section h2 {
+        font-size: 28px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 14px;
+    }
+
+    .contact-form button {
+        font-size: 16px;
+    }
+}
+.quick-links {
+    display: flex;
+    justify-content: space-around;
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.quick-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.quick-links a i {
+    margin-right: 8px;
+}
+
+.quick-links a:hover {
+    color: #007BFF;
+}
+
+/* Custom colors for each link */
+.quick-links a.instagram {
+    color: #E1306C; /* Instagram pink */
+}
+
+.quick-links a.instagram:hover {
+    color: #C13584; /* Darker pink for hover */
+}
+
+.quick-links a.whatsapp {
+    color: #25D366; /* WhatsApp green */
+}
+
+.quick-links a.whatsapp:hover {
+    color: #128C7E; /* Darker green for hover */
+}
+
+.quick-links a.linkedin {
+    color: #0077B5; /* LinkedIn blue */
+}
+
+.quick-links a.linkedin:hover {
+    color: #005582; /* Darker blue for hover */
+}
+
+/* Mobile view adjustments */
+@media (max-width: 600px) {
+    .quick-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .quick-links a {
+        margin: 5px 0;
+    }
+}
